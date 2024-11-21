@@ -40,8 +40,6 @@ BEGIN
 	
 	//Position
 	#ioDATA.Height := #ioDATA.CalibrateHeight - SCALE_X(MIN := 0.0, VALUE := NORM_X(MIN := 0, VALUE := (#ioDATA.CalibrateData - #iRAW), MAX := 27648), MAX := 50.0);
-
-	//komentarz z przegladarki
-
+	
 END_FUNCTION
 
