@@ -1,0 +1,45 @@
+﻿FUNCTION "FC_GT2_ANALOG" : Void
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR_INPUT 
+      iRAW : Int;
+   END_VAR
+
+   VAR_IN_OUT 
+      ioDATA : "UDT_GT2_ANALOG";
+   END_VAR
+
+   VAR_TEMP 
+      _RealRAW : Real;
+   END_VAR
+
+
+BEGIN
+	//Model             Upperlimit      Lower limit
+	//GT2-50            50.0            0.0
+	//
+	//Analog setting    Upperlimit      Lowerlimit
+	//                  20mA            4mA
+	
+	"FC_ANALOGtoVALUE"("i1-5V" := FALSE,
+	                   iAnalog := #iRAW,
+	                   iValueMax := 50.0,
+	                   iValueMin := 0.0,
+	                   oValue => #_RealRAW);
+	
+	//PositionRAW
+	#ioDATA.HeightRAW := #iRAW;
+	
+	//Calibrate
+	#ioDATA.CalibrateDone := FALSE;
+	
+	IF #ioDATA.Calibrate THEN
+	    #ioDATA.CalibrateData := #iRAW;
+	    #ioDATA.CalibrateDone := TRUE;
+	END_IF;
+	
+	//Position
+	#ioDATA.Height := #ioDATA.CalibrateHeight - SCALE_X(MIN := 0.0, VALUE := NORM_X(MIN := 0, VALUE := (#ioDATA.CalibrateData - #iRAW), MAX := 27648), MAX := 50.0);
+	
+END_FUNCTION
+
