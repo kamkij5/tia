@@ -94,7 +94,7 @@
   <Section Name="Temp" />
   <Section Name="Constant">
     <Member Name="MAX_TIME" Datatype="Time" Accessibility="Public">
-      <StartValue>T#10s</StartValue>
+      <StartValue>T#20s</StartValue>
     </Member>
   </Section>
 </Sections></Interface>
