@@ -23,7 +23,7 @@ BEGIN
 	
 	"FC_ANALOGtoVALUE"("i1-5V" := FALSE,
 	                   iAnalog := #iRAW,
-	                   iValueMax := 80.0,
+	                   iValueMax := 8000.0,
 	                   iValueMin := 0.0,
 	                   oValue => #_RealRAW);
 	
