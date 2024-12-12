@@ -379,7 +379,7 @@
     <Access Scope="LiteralConstant" UId="24">
       <Constant>
         <ConstantType>Real</ConstantType>
-        <ConstantValue>180.0</ConstantValue>
+        <ConstantValue>1877770.0</ConstantValue>
       </Constant>
     </Access>
     <Access Scope="LiteralConstant" UId="25">
