@@ -2,7 +2,7 @@
 <Document>
   <Engineering version="V16" />
   <DocumentInfo>
-    <Created>2024-11-21T10:52:37.7395579Z</Created>
+    <Created>2024-12-12T12:54:16.9802674Z</Created>
     <ExportSetting>WithDefaults</ExportSetting>
     <InstalledProducts>
       <Product>
@@ -379,7 +379,7 @@
     <Access Scope="LiteralConstant" UId="24">
       <Constant>
         <ConstantType>Real</ConstantType>
-        <ConstantValue>1877770.0</ConstantValue>
+        <ConstantValue>180.0</ConstantValue>
       </Constant>
     </Access>
     <Access Scope="LiteralConstant" UId="25">
