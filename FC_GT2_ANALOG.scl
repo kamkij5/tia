@@ -23,7 +23,7 @@ BEGIN
 	
 	"FC_ANALOGtoVALUE"("i1-5V" := FALSE,
 	                   iAnalog := #iRAW,
-	                   iValueMax := 50.0,
+	                   iValueMax := 80.0,
 	                   iValueMin := 0.0,
 	                   oValue => #_RealRAW);
 	
@@ -41,5 +41,6 @@ BEGIN
 	//Position
 	#ioDATA.Height := #ioDATA.CalibrateHeight - SCALE_X(MIN := 0.0, VALUE := NORM_X(MIN := 0, VALUE := (#ioDATA.CalibrateData - #iRAW), MAX := 27648), MAX := 50.0);
 	
+	//test
 END_FUNCTION
 
